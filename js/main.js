@@ -49,7 +49,7 @@ function createCards() {
     roleTextEl = document.createElement("h5")
     nameTextEl = document.createElement("p");
 
-    colEl.classList.add("col-4");
+    colEl.classList.add("col-lg-4", "col-md-6");
     cardEl.classList.add("card");
     imgEl.classList.add("card-img-top");
     bodyCardEl.classList.add("card-body");
