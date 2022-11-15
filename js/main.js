@@ -1,41 +1,45 @@
 const teamMember = [
     {
         name: "Wayne Barnett",
-        profile: "img/wayne-barnett-founder-ceo.jpg",
+        image: "img/wayne-barnett-founder-ceo.jpg",
         role: "Founder & CEO"
     },
     {
         name: "Angela Caroll",
-        profile: "img/angela-caroll-chief-editor.jpg",
+        image: "img/angela-caroll-chief-editor.jpg",
         role: "Chief Editor"
     },
     {
         name: "Walter Gordon",
-        profile: "img/walter-gordon-office-manager.jpg",
+        image: "img/walter-gordon-office-manager.jpg",
         role: "Office Manager"
     },
     {
         name: "Angela Lopez",
-        profile: "img/angela-lopez-social-media-manager.jpg",
+        image: "img/angela-lopez-social-media-manager.jpg",
         role: "Social Media Manager"
     },
     {
         name: "Scott Estrada",
-        profile: "img/scott-estrada-developer.jpg",
+        image: "img/scott-estrada-developer.jpg",
         role: "Developer"
     },
     {
         name: "Barbara Ramos",
-        profile: "img/barbara-ramos-graphic-designer.jpg",
+        image: "img/barbara-ramos-graphic-designer.jpg",
         role: "Graphic Designer"
     }
 ];
 
-console.log(teamMember);
 const rowEL = document.querySelector(".row");
 let imgEl;
 let roleTextEl;
 let nameTextEl;
+
+console.log(teamMember);
+for (let profile in teamMember) {
+    console.log(teamMember[profile]);
+}
 
 function createCards() {
     const colEl = document.createElement("div");
@@ -58,7 +62,7 @@ function createCards() {
 }
 
 function cardProfile(teamMember, imgEl, i) {
-    imgEl.src = teamMember[i].profile;
+    imgEl.src = teamMember[i].image;
     nameTextEl.textContent = teamMember[i].name;
     roleTextEl.textContent = teamMember[i].role;
 }
