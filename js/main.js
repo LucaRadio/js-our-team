@@ -36,10 +36,6 @@ let imgEl;
 let roleTextEl;
 let nameTextEl;
 
-console.log(teamMember);
-for (let profile in teamMember) {
-    console.log(teamMember[profile]);
-}
 
 function createCards() {
     const colEl = document.createElement("div");
@@ -61,14 +57,16 @@ function createCards() {
     rowEL.append(colEl);
 }
 
-function cardProfile(teamMember, imgEl, i) {
-    imgEl.src = teamMember[i].image;
-    nameTextEl.textContent = teamMember[i].name;
-    roleTextEl.textContent = teamMember[i].role;
+function cardProfile(teamMember, imgEl, profile) {
+    imgEl.src = teamMember[profile].image;
+    nameTextEl.textContent = teamMember[profile].name;
+    roleTextEl.textContent = teamMember[profile].role;
 }
 
-for (let i = 0; i < teamMember.length; i++) {
+console.log(teamMember);
+for (let profile in teamMember) {
     createCards();
-    cardProfile(teamMember, imgEl, i);
+    cardProfile(teamMember, imgEl, profile);
+    console.log(teamMember[profile]);
 }
 
